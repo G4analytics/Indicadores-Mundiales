@@ -1,6 +1,6 @@
 # Indicadores Mundiales
 
-En este informe se va a tratar Indicadores Demográficos, como lo son Población, esperanza de vida e Indice de Mortalidad, todo ello por países. En el vamos a tratar diferentes objetos visuales y pondremos en práctica características clave que nos ofrece Power BI como herramienta de visualización.
+En este informe se va a tratar Indicadores Demográficos, como lo son Población, Esperanza de Vida e Indice de Mortalidad, todo ello por continenentes y países. En el vamos a tratar diferentes objetos visuales y pondremos en práctica características clave que nos ofrece Power BI como herramienta de visualización.
 
 ## Parte 1 
 

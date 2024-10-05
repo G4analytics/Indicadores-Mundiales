@@ -81,6 +81,55 @@ La línea seguida ha sido:
 
 ![Fondo](https://github.com/user-attachments/assets/b4567917-482c-423c-8dbc-215cbd8a66dd)
 
+## Parte 2
 
+#### RECOLECCIÓN DE DATOS, TRANSFORMACIÓN Y MODELADO
+Se agregan las tablas Esperanza de Vida y Mortalidad Infantil. Entendemos como Esperanza de Vida la media de años que vive una determinada población, en este caso por continentes y países.
+
+Por otro lado, la Mortalidad Infantil hace referencia a la cantidad de niños menores de 1 año muertos de cada 1000 nacimientos.
+Nuevamente, nos interesaría crear segmentadores sobre ambos datos recogidos en estas dos tablas con lo que crearemos dos medidas condicionales en Transformar Datos. 
+
+Mortalidad infantil -> Nueva Columna -> Columna Condicional
+
+    Si - Mortalidad Infantil - es menor o igual – 10 – Entonces – 0 – 10
+    Si - Mortalidad Infantil - es menor o igual – 20 – Entonces – 10 – 20
+…
+
+Esperanza de Vida -> Nueva Columna -> Columna Condicional
+
+    Si – Esperanza de VIda - es menor o igual – 60 – Entonces – menos de 60
+    Si – Esperanza de Vida - es menor o igual – 70 – Entonces – 60 - 70
+
+…
+
+Posteriormente, crearemos las tablas para ordenar los ítems dentro de la visualización de segmentación 
+
+![Mort infantil](https://github.com/user-attachments/assets/c3cadbd0-1023-453a-9060-914d78979819)
+
+![Esp de vida](https://github.com/user-attachments/assets/e7fdcb37-d780-4e47-abf5-4bffeab037a2)
+
+Inicio-> Datos -> Introducir Datos -> pegamos las tablas desde Excel -> Las relacionamos con la tabla “Countries” y al estudiar la cardinalidad veremos que se trata de un tipo de relación de 1:* (uno a muchos). 
+
+Una vez tengamos esto relacionado colocaremos el Campo “Grupo Esperanza de Vida” y “Grupo Mortalidad Infantil” de las tablas “Orden Esperanza de Vida” y “Orden Mortalidad Infantil” en los dos segmentadores creados. Veremos que no se representa con el orden requerido por lo que:
+Seleccionamos la columna “Grupo Mortalidad Infantil” -> Herramientas de Columna -> Ordenar por columna -> Numérico.
+Seleccionamos la columna “Grupo Esperanza de Vida” -> Herramientas de Columna -> Ordenar por columna -> Numérico.
+Con ello, ambos quedarán ordenados a nuestro interés.
+
+![relaciones](https://github.com/user-attachments/assets/b5f57969-39c9-4adc-992e-2882deb07e46)
+
+#### VISUALIZACIONES
+
+En este sentido he mantenido la Matriz y el mapa, con variantes.
+
+Para el caso de la Matriz he agregado el promedio tanto de Mortalidad Infantil como de Esperanza de Vida. Para conseguirlo, simplemente arrastramos los valores de Suma al campo Valores-> le damos a la flecha que nos permite cambiar el tipo de resumen de los datos y seleccionamos el promedio.
+
+He agregado Elementos de celda tanto para Mortalidad Infantil como Esperanza de Vida. Para ello:
+Seleccionamos la matriz -> Elementos de Celda -> Color de Fondo -> Formato Condicional -> En mi caso he agregado tanto para una como para otra la Opción de Degradado donde a mayor cantidad mayor intensidad.
+
+En el caso de la Mortalidad he agregado Iconos, los cuales también son útiles para configurar alertas. El proceso es el mismo salvo que elegiremos la opción Íconos -> Formato Condicional. Lo he configurado en base a Reglas. Por ejemplo:
+
+    Si el valor >= 0 Numero y < 20 Numero entonces (punto verde) ; Esto significa que si la Mortalidad Infantil es menor de 20 por cada 1.000 niños le corresponderá un Icono verde.
+
+Para el caso del mapa he modificado los colores de las burbujas, los cuales representan en promedio la esperanza de vida por países. Para hacer eso, Objeto Visual -> Burbujas -> Colores -> Formato Condicional-> Degradado basado en el campo Promedio de Esperanza de Vida -> Color blanco para el mínimo y morado fuerte para el máximo. A su vez, he cambiado la variable que permite configurar el Tamaño de la Burbuja, en mi caso va a representar la Mortalidad Infantil.
 
 

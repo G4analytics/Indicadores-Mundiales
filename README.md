@@ -81,6 +81,10 @@ La línea seguida ha sido:
 
 ![Fondo](https://github.com/user-attachments/assets/b4567917-482c-423c-8dbc-215cbd8a66dd)
 
+#### RESULTADO FINAL
+
+![Final parte 1](https://github.com/user-attachments/assets/698affab-3b94-4f9c-9455-7344a9959f08)
+
 ## Parte 2
 
 #### RECOLECCIÓN DE DATOS, TRANSFORMACIÓN Y MODELADO
@@ -132,4 +136,11 @@ En el caso de la Mortalidad he agregado Iconos, los cuales también son útiles 
 
 Para el caso del mapa he modificado los colores de las burbujas, los cuales representan en promedio la esperanza de vida por países. Para hacer eso, Objeto Visual -> Burbujas -> Colores -> Formato Condicional-> Degradado basado en el campo Promedio de Esperanza de Vida -> Color blanco para el mínimo y morado fuerte para el máximo. A su vez, he cambiado la variable que permite configurar el Tamaño de la Burbuja, en mi caso va a representar la Mortalidad Infantil.
 
+#### FONDO
+
+![Fondo utilizado 2](https://github.com/user-attachments/assets/a3ad7810-f677-4181-a50b-776f637ba4cc)
+
+#### RESULTADO FINAL
+
+![Final parte 2](https://github.com/user-attachments/assets/15e4fdca-8f4f-4f39-bd8a-d2538588aa65)
 
